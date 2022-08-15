@@ -1,0 +1,12 @@
+.card {
+    img {
+        @include size(100%,120px);
+        object-fit: cover;
+    }
+    .person {
+        @include size(100px,100px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+}

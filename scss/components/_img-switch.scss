@@ -1,0 +1,30 @@
+.img-switch {
+    .big-img {
+        img {
+            @include size(540px,440px);
+            @include pc-pad {
+                @include size(270px,221px);
+            }
+            @include pad {
+                @include size(100%,auto);
+            }
+        }
+    }
+    .small-img {
+        display: flex;
+        width: 100%;
+        li {
+            margin-top: 12px;
+            margin-right: 8px;
+            img {
+                @include size(96px,96px);
+                @include pc-pad {
+                    @include size(63px,63px);
+                }
+                @include pad {
+                    @include size(82px,82px);
+                }
+            }
+        }
+    }
+}

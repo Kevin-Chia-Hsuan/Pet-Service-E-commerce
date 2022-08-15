@@ -1,0 +1,63 @@
+.nav-bg {
+    background-color: $light;
+}
+/* LOGO */
+.logo {
+    a {
+        display: block;
+        /* 將background-image寫在Html的標籤中，方便後端工程師替換logo圖片 */
+        // background-image: url(https://raw.githubusercontent.com/Kevin-Chia-Hsuan/Hexschool-web-layout-training/23eb430c04b27117c183e259992a4a2fdec8def9/week8/images/logo.svg);
+        @include background-type;
+        background-size: cover;
+        @include size(125px,56px);
+    }
+}
+.nav-menu {
+        font-weight: bolder;
+        @include mobile {
+            @include mobile-menu-type;
+        }
+        background: $light;
+    li {
+        border-bottom: 1px solid $success;
+        a {
+            text-align: center;
+        }
+    }
+}
+.menu {
+    a {
+        position: relative;
+        font-weight: bolder;
+        &:hover {
+            color: $third;
+        }
+        /*製作滑到a連結後，出現底線的動畫*/
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;/*由50%的地方往0呈現*/
+            right: 50%;/*由50%的地方往0呈現*/
+            bottom: 8px;
+            height: 0;
+            border-bottom: 2px solid $third;
+            transition: .5s;/*0.5秒內動畫呈現完畢*/
+        }
+        &:hover:after{
+            left: 0;/*由50%的地方往0呈現*/
+            right: 0;/*由50%的地方往0呈現*/
+        }
+    }
+}
+.showmenu {
+    color: $secondary;
+    &:hover {
+        color: $third;
+    }
+}
+/* mobile以下，顯示menu選單 */
+.menu-show .nav-menu {
+    @include mobile {
+        max-height: 600px;
+    }
+}

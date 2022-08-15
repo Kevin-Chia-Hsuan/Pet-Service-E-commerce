@@ -1,0 +1,6 @@
+.sticky {
+    @include pc {
+        position: sticky;
+        top: 0px;
+    }
+}

@@ -1,0 +1,20 @@
+.scrollTopBtn {
+    text-decoration: none;
+    position: fixed;/*圓形圖示*/
+    display: flex;/*^圖示*/
+    justify-content: center;/*^圖示置中*/
+    align-items: center;/*^圖示置中*/
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 35px;
+    border-radius: 50px;
+    background: $danger;
+    &:hover {
+        text-decoration: none;
+        background: $primary;
+    }
+    i {
+        color: $light;
+    }
+}

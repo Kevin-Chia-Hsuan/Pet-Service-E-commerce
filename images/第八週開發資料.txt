@@ -1,0 +1,57 @@
+大型寵物訂房網站 icon
+首頁
+ - arrow_drop_down
+ - arrow_right
+ - local_phone
+預約項目 Modal
+ - house
+ - wash
+ - roofing
+ - directions_walk
+ - place
+ - star
+預約成功 Modal
+ - pets
+會員資料
+ - arrow_drop_up
+ - create
+手機尺寸頁面
+ - dehaze （漢堡選單）
+
+
+文字大小相關
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+$s-font-size:                 $font-size-base * 0.875 !default;
+$m-font-size:                 $font-size-base * 2.5 !default;
+$l-font-size:                 $font-size-base * 3 !default; 
+
+
+顏色相關
+$primary:       #772400 !default;
+$secondary:     #F0AD25 !default;
+$success:       #CED4DA !default;
+$info:          #818A91 !default;
+$warning:       #D5411A !default;
+$danger:        #D54100 !default;
+$light:         #FFFFFF !default;
+$dark:          #000000 !default;
+
+文字主色 #772400
+btn 背景色#D54100  外框色#D5411A 紅
+主背景色 #F0AD25 外框色 #F6A436 黃
+input主色 #6C757D 外框色 #CED4DA 灰
+
+line-height 行距
+18
+21
+24
+30
+36
+42
+48
+60

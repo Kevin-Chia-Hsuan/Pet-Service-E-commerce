@@ -1,0 +1,52 @@
+.banner {
+    /* 將background-image寫在Html的標籤中，方便後端工程師替換logo圖片 */
+    // background-image: url('https://raw.githubusercontent.com/Kevin-Chia-Hsuan/Hexschool-web-layout-training/main/week8/images/index-9.jpeg');
+    background-size: cover;
+    background-position: center center;
+    height: 584px;
+    @include pad {
+        height: 812px;
+        .banner-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+.item {
+    display: flex;
+    &::before {
+        content: '';
+        background: #000;
+        display: block;
+        height: 100%;
+        opacity: .6;
+        transition: opacity .2s ease-in-out;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+    &:hover::before {
+        opacity: .1;
+    }
+}
+.flex-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    h5 {
+        position: relative;
+        z-index: 1;
+    }
+}

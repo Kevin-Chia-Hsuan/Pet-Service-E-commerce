@@ -1,0 +1,76 @@
+//自訂網頁文字大小、行高
+$text-types: (
+    xs: $font-size-custom * 0.875, // font-siz:14px line-height:21px
+    base: $font-size-custom, // font-siz:16px line-height:24px
+    m: $font-size-custom * 1.25, // font-siz:20px line-height:30px
+    lg: $font-size-custom * 1.5, // font-siz:24px line-height:36px
+    xl: $font-size-custom * 1.75, // font-siz:28px line-height:42px
+    2xl: $font-size-custom * 2, // font-siz:32px line-height:48px
+    3xl: $font-size-custom * 2.5, // font-siz:40px line-height:60px
+    4xl: $font-size-custom * 3, // font-siz:48px line-height:72px
+) !default;
+
+@each $name,$font-size-custom in $text-types {
+    .text-#{$name} {
+        font-size: $font-size-custom;
+        line-height: 1.5;
+    }
+}
+@include pc {
+    @each $name,$font-size-custom in $text-types {
+        .text-pc-#{$name} {
+            font-size: $font-size-custom;
+            line-height: 1.5;
+        }
+    }
+}
+@include mobile {
+    @each $name,$font-size-custom in $text-types {
+        .text-sm-#{$name} {
+            font-size: $font-size-custom;
+            line-height: 1.5;
+        }
+    }
+}
+
+//依照葉子助教的建議，改寫成each寫法
+// // font-siz:14px line-height:21px
+// .text-xs {
+//     font-size: $font-size-custom * 0.875;
+//     line-height: 1.5;
+// }
+// // font-siz:16px line-height:24px
+// .text-base {
+//     font-size: $font-size-custom;
+//     line-height: 1.5;
+// }
+// // font-siz:20px line-height:30px
+// .text-m {
+//     font-size: $font-size-custom * 1.25;
+//     line-height: 1.5;
+// }
+// // font-siz:24px line-height:36px
+// .text-lg {
+//     font-size: $font-size-custom * 1.5;
+//     line-height: 1.5;
+// }
+// // font-siz:28px line-height:42px
+// .text-xl {
+//     font-size: $font-size-custom * 1.75;
+//     line-height: 1.5;
+// }
+// // font-siz:32px line-height:48px
+// .text-2xl {
+//     font-size: $font-size-custom * 2;
+//     line-height: 1.5;
+// }
+// // font-siz:40px line-height:60px
+// .text-3xl {
+//     font-size: $font-size-custom * 2.5;
+//     line-height: 1.5;
+// }
+// // font-siz:48px line-height:72px
+// .text-4xl {
+//     font-size: $font-size-custom * 3;
+//     line-height: 1.5;
+// }
